@@ -1,0 +1,78 @@
+Explain the importance of file handling in C. Discuss how to perform file
+operations like opening, closing, reading, and writing files.
+
+File handling in C is important because it allows programs to store, retrieve, and manipulate data on external storage devices like hard disks. Working with files helps you save data for later use, process large datasets, log program activity, and share information between different runs of a program or between programs.
+
+Without file handling, all data in a C program would be temporary and lost after the program finishes execution. File operations make programs practical for many real-world applications, such as maintaining databases, handling configurations, or processing text files.
+
+How to perform file operations in C
+
+File operations in C are done through functions provided by the standard library (stdio.h). The core steps involve opening a file, performing operations (read/write), and closing the file.
+
+Opening a File  
+Use the fopen() function to open a file. You must specify the filename and the mode (read, write, append, etc.). fopen() returns a FILE pointer.
+
+Example:
+```c
+FILE *fp;
+fp = fopen("data.txt", "r");  // opens file for reading
+if (fp == NULL) {
+    printf("File cannot be opened\n");
+}
+```
+
+Common file modes:
+- "r": Read, file must exist
+- "w": Write, creates a new file or erases an existing one
+- "a": Append, adds new data to the end of the file
+- "r+": Read and write
+
+Closing a File  
+Always close a file after you are done by using fclose(). This frees system resources and saves changes.
+
+Example:
+```c
+fclose(fp);
+```
+
+Reading from a File  
+You can read data from a file using functions like fscanf(), fgets(), and fgetc().
+
+Example with fscanf():
+```c
+FILE *fp = fopen("data.txt", "r");
+int num;
+fscanf(fp, "%d", &num);   // Reads an integer from the file
+fclose(fp);
+```
+
+Example with fgets() (reads one line at a time):
+```c
+char line[100];
+fgets(line, 100, fp);
+```
+
+Example with fgetc() (reads one character):
+```c
+char ch = fgetc(fp);
+```
+
+Writing to a File  
+Use fprintf(), fputs(), or fputc() for writing.
+
+Example using fprintf():
+```c
+FILE *fp = fopen("output.txt", "w");
+fprintf(fp, "Hello, file!\n");
+fclose(fp);
+```
+
+Example using fputs():
+```c
+fputs("Another line\n", fp);
+```
+
+Example using fputc():
+```c
+fputc('A', fp);
+```

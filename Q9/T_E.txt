@@ -1,0 +1,66 @@
+Explain the concept of arrays in C. Differentiate between one-dimensional and
+multi-dimensional arrays with examples.
+
+Arrays in C are collections of variables of the same data type stored in contiguous memory locations. They allow you to store and manage multiple values using one name and an index.
+
+What is an Array?  
+An array lets you reference several elements (of the same type, like int or float) using a single variable name, with each element accessed via an index.
+
+Syntax for declaring an array:  
+```c
+data_type array_name[size];
+```
+
+Example:  
+```c
+int numbers[5];    // Declares an array of 5 integers
+```
+
+One-Dimensional Array  
+A one-dimensional array is like a simple list. Each element is accessed using a single index.
+
+Declaration:
+```c
+int marks[4];    // 1D array of 4 integers
+```
+
+Initialization and usage:
+```c
+int marks[4] = {90, 85, 80, 75};
+printf("%d", marks[2]);   // prints 80 (third element, index 2)
+```
+
+Uses: Storing lists of values, such as scores or names.
+
+Multi-Dimensional Array  
+A multi-dimensional array is an array of arrays. The most common type is a two-dimensional array, which behaves like a table (rows and columns).
+
+Declaration:
+```c
+int matrix[3][2];    // 2D array: 3 rows, 2 columns
+```
+
+Initialization and usage:
+```c
+int matrix[2][3] = { {1, 2, 3}, {4, 5, 6} };
+printf("%d", matrix[1][2]);    // prints 6 (row 1, column 2)
+```
+
+Uses: Representing data structures like tables, matrices, or grids.
+
+Higher dimensions:
+You can have more than two dimensions:
+```c
+int cube[2][3][4];    // 3D array: 2 layers, 3 rows, 4 columns
+```
+But these are less commonly used.
+
+Difference Summary
+
+| Feature             | One-Dimensional Array        | Multi-Dimensional Array               |
+|---------------------|-----------------------------|---------------------------------------|
+| Structure           | Linear list                 | Table (2D) or higher grid structures  |
+| Declaration         | int arr;                 | int arr;                        |
+| Access              | arr[i]                      | arr[i][j]                             |
+| Uses                | Lists, sequences            | Tables, matrices, grids               |
+| Initialization      | int arr = {2,3,4};       | int arr = {{1,2},{3,4}};        |

@@ -1,0 +1,61 @@
+Explain string handling functions like strlen(), strcpy(), strcat(),
+strcmp(), and strchr(). Provide examples of when these functions are
+useful.
+
+Here’s an explanation of several common string handling functions in C, with practical examples for each.
+
+strlen()  
+Computes the length of a string (number of characters before the null terminator '\0').
+
+Example:
+```c
+char str[] = "hello";
+int len = strlen(str);   // len will be 5
+```
+Useful when you need to process or validate the length of a string (e.g., password limits).
+
+strcpy()  
+Copies a string from the source (second argument) to the destination (first argument).
+
+Example:
+```c
+char src[] = "abc";
+char dest[10];
+strcpy(dest, src);   // dest now contains "abc"
+```
+Used to duplicate strings or initialize buffers with strings.
+
+strcat()  
+Concatenates (joins) two strings. Appends the source string to the end of the destination string.
+
+Example:
+```c
+char str1[20] = "Hello, ";
+char str2[] = "world!";
+strcat(str1, str2);   // str1 now contains "Hello, world!"
+```
+Useful for building messages, file paths, or combined text from several parts.
+
+strcmp()  
+Compares two strings lexicographically. Returns 0 if they are equal, a positive value if the first is greater, and a negative value if the second is greater.
+
+Example:
+```c
+char a[] = "apple";
+char b[] = "banana";
+int res = strcmp(a, b);   // res < 0 because "apple" < "banana"
+```
+Commonly used to sort strings, check for equality, or determine ordering.
+
+strchr()  
+Searches for the first occurrence of a character in a string. Returns a pointer to that character in the string if found, or NULL if not.
+
+Example:
+```c
+char text[] = "example";
+char *ptr = strchr(text, 'a');   // ptr points to the first 'a' in "example"
+if (ptr != NULL) {
+    // character found at position: ptr - text
+}
+```
+Useful for parsing or scanning within a string, such as finding delimiters (e.g., searching for '@' in email addresses).

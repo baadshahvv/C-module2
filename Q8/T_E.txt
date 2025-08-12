@@ -1,0 +1,56 @@
+What are functions in C? Explain function declaration, definition, and how to
+call a function. Provide examples.
+
+Functions in C are blocks of code designed to perform a specific task. They help organize your code, make it reusable, and easier to manage by breaking complex programs into smaller, meaningful pieces.
+
+There are three main aspects to using functions: declaring the function, defining the function, and calling the function.
+
+Function declaration  
+This tells the compiler about the function’s name, return type, and parameters. It acts as a prototype and usually appears at the top of your code or in header files.
+
+Example:
+```c
+int add(int a, int b); // function prototype
+```
+
+Function definition  
+This is where you actually write the code that specifies what the function does.
+
+Example:
+```c
+int add(int a, int b) {     // function header
+    int sum = a + b;        // function body
+    return sum;             // returns the result
+}
+```
+
+Calling a function  
+To use the function, you call it in your program and supply the required arguments.
+
+Example:
+```c
+int result = add(5, 3);   // function call; result will be 8
+printf("%d", result);
+```
+
+Complete Example:  
+Here’s a simple program that uses all three steps:
+
+```c
+#include 
+
+// Declaration
+int add(int, int);
+
+int main() {
+    int x = 10, y = 20;
+    int result = add(x, y); // Calling the function
+    printf("Sum is %d\n", result);
+    return 0;
+}
+
+// Definition
+int add(int a, int b) {
+    return a + b;
+}
+```

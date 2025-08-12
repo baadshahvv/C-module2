@@ -1,0 +1,66 @@
+Describe the steps to install a C compiler (e.g., GCC) and set up an Integrated
+Development Environment (IDE) like DevC++, VS Code, or CodeBlocks
+
+
+Step 1: Install GCC Compiler on Windows (via MinGW-w64)
+
+1. Download MinGW-w64
+
+   * Go to [https://www.mingw-w64.org](https://www.mingw-w64.org) or directly to [https://winlibs.com](https://winlibs.com) for an easier installer.
+2. Run the Installer
+
+   * Architecture: `x86_64` (for 64-bit Windows).
+   * Threads: `posix`
+   * Exception: `seh` (for 64-bit).
+   * Install to `C:\mingw-w64`.
+3. Add to PATH
+
+   * Press **Win + S** → search “Environment Variables”.
+   * In *System Variables*, select `Path` → **Edit** → **New**, then add:
+
+     ```
+     C:\mingw-w64\bin
+     ```
+4. Verify Installation
+
+   * Open **Command Prompt** and type:
+
+     ```
+     gcc --version
+     ```
+   * If it shows the GCC version, you’re done.
+
+---
+
+Step 2: Install an IDE
+
+Option A: Dev-C++ (Easiest for Beginners)
+
+1. Download from [https://sourceforge.net/projects/orwelldevcpp/](https://sourceforge.net/projects/orwelldevcpp/).
+2. Install with default settings (comes with GCC pre-installed).
+3. Open Dev-C++ → **Tools → Compiler Options** to confirm GCC path.
+4. Create a new project → choose C language → start coding.
+
+---
+
+Option B: Code::Blocks (with GCC bundled)
+
+1. Go to [http://www.codeblocks.org/downloads/](http://www.codeblocks.org/downloads/).
+2. Download **Code::Blocks with MinGW** version.
+3. Install and open Code::Blocks.
+4. In **Settings → Compiler**, make sure “GNU GCC Compiler” is selected.
+
+---
+
+Option C: Visual Studio Code
+
+1. Download from [https://code.visualstudio.com](https://code.visualstudio.com).
+2. Install VS Code.
+3. Install GCC first (Step 1 above).
+4. Open VS Code → go to Extensions → install **C/C++ by Microsoft**.
+5. Create a `.c` file and run it using the **terminal**:
+
+   ```
+   gcc file.c -o file.exe
+   ./file.exe
+   ```

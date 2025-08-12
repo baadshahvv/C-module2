@@ -1,0 +1,84 @@
+Explain the basic structure of a C program, including headers, main function, comments, data types, and variables. Provide examples.
+
+
+1. Structure of a C Program
+A C program generally has:
+
+1. Header Files  
+2. Main Function  
+3. Comments  
+4. Variable Declarations & Data Types  
+5. Statements & Expressions
+6. Return Statement
+
+	1. Header Files
+- Contain definitions of functions and macros provided by the C Standard Library.
+- Brought into your program using `#include`.
+- Example:  
+  c
+  #include  // For printf and scanf functions
+  
+ 	2. Comments
+- Used to explain the code; ignored by the compiler.
+- Single-line comment: `// comment here`
+- Multi-line comment:
+  c
+  /* This is
+     a multi-line comment */
+
+	3. Main Function
+- Every C program must have a `main()` function.
+- Execution starts from here.
+- Syntax variations:  
+  c
+  int main() {
+      // code
+      return 0;
+  }
+  
+4. Data Types
+- Basic types:  
+  - `int` → integers  
+  - `float` → decimal numbers  
+  - `char` → single characters  
+  - `double` → double-precision floating-point  
+- Example:
+  c
+  int age = 20;
+  float salary = 35000.75;
+  char grade = 'A';
+
+ 	5. Variables
+- Named storage locations in memory.
+- Must be **declared before use**.
+- Syntax:  
+  c
+  data_type variable_name = value;
+
+	Example C Program
+c
+#include   // Header file for input/output functions
+
+// This program demonstrates the basic structure of C
+
+int main() {
+    // Variable declarations
+    int age = 25;        // integer variable
+    float height = 5.9;  // float variable
+    char grade = 'A';    // char variable
+
+    // Printing outputs
+    printf("Age: %d\n", age);              // %d for integer
+    printf("Height: %.1f\n", height);      // %.1f for float
+    printf("Grade: %c\n", grade);          // %c for character
+
+    return 0;  // End of program
+}
+
+ Program Flow
+1. Preprocessor reads the `#include` statement and adds the standard library code.
+2. Compiler compiles from the `main()` function.
+3. Variables are created in memory and initialized.
+4. Program executes the `printf()` statements.
+5. Returns 0 to indicate successful execution.
+

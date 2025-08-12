@@ -1,0 +1,15 @@
+Research and provide three real-world applications where C programming is
+extensively used, such as in embedded systems, operating systems, or game
+development.
+
+Embedded systems & microcontrollers
+C is the dominant language for programming microcontrollers and small embedded devices because it’s compact, fast, and gives direct control over hardware and memory (critical when you have tiny RAM/flash). Real-world examples: Arduino “sketches” are compiled as C/C++ and its core libraries are in C/C++; ARM’s embedded platforms and RTOS ecosystems likewise expect C/C++ firmware. 
+
+
+Operating systems & low-level system software
+Major OS kernels and system components are written in C because the language balances low-level hardware access (like assembly) with higher-level structure. The Linux kernel is a prime example — the kernel source and official docs state the kernel is written in C (with small architecture-specific assembly). Many other OS components and drivers are also in C. 
+
+
+
+Game development (engine & middleware)
+While many modern engines use C++ for high-level engine structure, C remains important for low-level game libraries and cross-platform middleware (e.g., SDL — Simple DirectMedia Layer — is written in C and widely used for cross-platform audio/input/video), and performance-critical parts or platform SDKs are implemented in C/C++. So game engines and native game libraries rely on the C/C++ toolchain for speed and portability

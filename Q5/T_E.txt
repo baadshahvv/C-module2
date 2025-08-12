@@ -1,0 +1,71 @@
+Explain decision-making statements in C (if, else, nested if-else, switch).
+Provide examples of each.
+
+Decision-making statements in C let you control the flow of your program based on conditions. The main statements are if, else, nested if-else, and switch. Here’s an explanation and example for each.
+
+if statement  
+The if statement checks a condition. If the condition is true, the block of code inside executes.
+
+Example:
+```c
+int number = 5;
+if (number > 0) {
+    printf("Number is positive\n");
+}
+```
+If number is greater than 0, it prints "Number is positive".
+
+if-else statement  
+This lets you choose between two branches: one if the condition is true, another if it is false.
+
+Example:
+```c
+int number = -3;
+if (number > 0) {
+    printf("Positive\n");
+} else {
+    printf("Not positive\n");
+}
+```
+If number is not greater than 0, it prints "Not positive".
+
+nested if-else statement  
+You can use if-else statements inside other if-else statements to check multiple conditions.
+
+Example:
+```c
+int number = 0;
+if (number > 0) {
+    printf("Positive\n");
+} else {
+    if (number == 0) {
+        printf("Zero\n");
+    } else {
+        printf("Negative\n");
+    }
+}
+```
+This checks if number is positive, zero, or negative.
+
+switch statement  
+The switch statement is useful for selecting among many options based on the value of an integer or character expression.
+
+Example:
+```c
+int day = 3;
+switch (day) {
+    case 1:
+        printf("Monday\n");
+        break;
+    case 2:
+        printf("Tuesday\n");
+        break;
+    case 3:
+        printf("Wednesday\n");
+        break;
+    default:
+        printf("Other day\n");
+}
+```
+If day is 3, it prints "Wednesday". If it doesn't match any case, "Other day" is printed.
+

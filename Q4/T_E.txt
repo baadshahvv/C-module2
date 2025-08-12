@@ -1,0 +1,38 @@
+Write notes explaining each type of operator in C: arithmetic, relational,
+logical, assignment, increment/decrement, bitwise, and conditional operators.
+
+Arithmetic operators  
+Used to perform mathematical calculations on values.
+
+- + (Addition): Adds two operands.  
+  Example: a + b
+- - (Subtraction): Subtracts the second operand from the first.  
+  Example: a - b
+- * (Multiplication): Multiplies both operands.  
+  Example: a * b
+- / (Division): Divides the numerator by the denominator.  
+  Example: a / b
+- % (Modulus): Gives the remainder after division.  
+  Example: a % b
+
+Relational operators  
+Used for comparing values; the result is either true (1) or false (0).
+
+- == (Equal to): Checks if two values are equal.  
+  Example: a == b
+- != (Not equal to): Checks if two values are not equal.  
+  Example: a != b
+- > (Greater than): Checks if the left value is greater.  
+  Example: a > b
+- = (Greater than or equal to): Checks if the left value is greater or equal.  
+  Example: a >= b
+-  0) && (b > 0)
+- || (Logical OR): True if at least one condition is true.  
+  Example: (a > 0) || (b > (Right shift): Shifts bits to the right.  
+  Example: a >> 1
+
+Conditional operator (Ternary operator)
+Used for conditional expressions; it is the only ternary operator in C.
+
+- ? : (Condition ? expression1 : expression2): If the condition is true, expression1 is evaluated; otherwise, expression2.
+  Example: result = (a > b) ? a : b;

@@ -1,0 +1,45 @@
+Explain the use of break, continue, and goto statements in C. Provide
+examples of each.
+
+break statement  
+The break statement exits from a loop (for, while, do-while) or a switch statement immediately, even if the loop condition is still true. It is often used to leave the loop when a certain condition occurs.
+
+Example (exiting a loop when a number is found):
+```c
+for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+        break; // Loop stops when i is 5
+    }
+    printf("%d ", i);
+}
+// Output: 0 1 2 3 4
+```
+
+continue statement  
+The continue statement skips the rest of the loop body for the current iteration and moves directly to the next iteration. It doesn’t exit the loop but jumps to the next loop cycle when a condition is met.
+
+Example (skipping even numbers):
+```c
+for (int i = 0; i < 6; i++) {
+    if (i % 2 == 0) {
+        continue; // Skip even numbers
+    }
+    printf("%d ", i);
+}
+// Output: 1 3 5
+```
+
+goto statement  
+The goto statement lets you jump to another part of the code using a labeled destination. Its use is generally discouraged because it can make code harder to read and maintain, but sometimes it’s used for error handling or exiting from deeply nested loops.
+
+Example (jumping to a label):
+```c
+int i = 0;
+start:
+printf("%d ", i);
+i++;
+if (i < 3) {
+    goto start; // Goes back to the "start" label
+}
+// Output: 0 1 2
+```

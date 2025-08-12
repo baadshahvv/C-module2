@@ -1,0 +1,71 @@
+Explain the concept of structures in C. Describe how to declare, initialize, and
+access structure members.
+
+A structure in C is a user-defined data type that lets you combine data items of different kinds under one name. It’s useful for grouping related information, such as describing an employee with name, age, and salary, all together.
+
+Declaring a structure  
+You declare a structure with the struct keyword, listing the member variables inside curly braces. Each member can be of any data type.
+
+Example:
+```c
+struct Student {
+    int roll_no;
+    char name[50];
+    float marks;
+};
+```
+This defines a structure called Student with three members: roll_no (int), name (string), and marks (float).
+
+Creating (declaring) structure variables  
+Once you’ve defined a structure type, you can create variables of that type:
+```c
+struct Student s1;
+```
+
+Initializing structure members  
+You can initialize the members at the time of declaration:
+```c
+struct Student s2 = {101, "Rahul", 87.5};
+```
+
+You can also assign values to members individually:
+```c
+s1.roll_no = 102;
+strcpy(s1.name, "Anjali");    // use string functions for char arrays
+s1.marks = 90.0;
+```
+
+Accessing structure members  
+Use the dot operator (.) to access members of a structure variable:
+```c
+printf("Roll No: %d\n", s1.roll_no);
+printf("Name: %s\n", s1.name);
+printf("Marks: %.2f\n", s1.marks);
+```
+
+Summary example  
+Here’s a compact program showing all the steps:
+```c
+#include 
+#include 
+
+struct Student {
+    int roll_no;
+    char name[50];
+    float marks;
+};
+
+int main() {
+    struct Student s1;
+    s1.roll_no = 100;
+    strcpy(s1.name, "Amit");
+    s1.marks = 78.5;
+
+    struct Student s2 = {101, "Rahul", 87.5};
+
+    printf("Student 1: %d, %s, %.1f\n", s1.roll_no, s1.name, s1.marks);
+    printf("Student 2: %d, %s, %.1f\n", s2.roll_no, s2.name, s2.marks);
+
+    return 0;
+}
+```

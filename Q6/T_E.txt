@@ -1,0 +1,48 @@
+Compare and contrast while loops, for loops, and do-while loops. Explain the
+scenarios in which each loop is most appropriate.
+
+while loop  
+A while loop repeatedly executes a block of code as long as a given condition is true. The condition is checked before the first and each subsequent iteration. If the condition is false upfront, the loop will not run at all.
+
+Example:
+```c
+int i = 0;
+while (i < 5) {
+    printf("%d\n", i);
+    i++;
+}
+```
+Best for cases where the number of iterations is not known in advance, and you want to keep looping until something particular happens.
+
+for loop  
+A for loop is generally used when the number of iterations is known in advance. It has three main components in its header: initialization, condition, and increment/decrement.
+
+Example:
+```c
+for (int i = 0; i < 5; i++) {
+    printf("%d\n", i);
+}
+```
+Best for situations where you want to repeat a block a specific number of times, like iterating over a range or array.
+
+do-while loop  
+A do-while loop is similar to the while loop, but the condition is checked after the block is executed. This means the loop body is always executed at least once, even if the condition is false from the start.
+
+Example:
+```c
+int i = 0;
+do {
+    printf("%d\n", i);
+    i++;
+} while (i < 5);
+```
+Best for scenarios where loop code must run at least once, such as displaying a menu and asking for user input until valid input is entered.
+
+Comparison Table
+
+| Loop Type     | Condition Checked | Minimum Executions | Best Use-Case                           |
+|---------------|------------------|--------------------|-----------------------------------------|
+| while         | Before loop      | 0                  | When count/terminating condition is not predetermined |
+| for           | Before loop      | 0                  | When loop count is known                |
+| do-while      | After block      | 1                  | When at least one iteration is needed   |
+
